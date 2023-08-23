@@ -1,0 +1,12 @@
+#root {
+    display: flex;
+}
+
+.editor,
+.output {
+    flex: 1;
+}
+
+input {
+    display: block;
+}
