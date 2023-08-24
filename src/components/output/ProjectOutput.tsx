@@ -51,7 +51,7 @@ const ProjectOutput: React.FC<ProjectOutputProps> = ({ project }) => {
                     </span>
                 </div>
             </div>
-            <ul>
+            <ul className="project-description-list">
                 {project.description1 && <li>{project.description1}</li>}
                 {project.description2 && <li>{project.description2}</li>}
                 {project.description3 && <li>{project.description3}</li>}
