@@ -16,23 +16,35 @@ interface OutputProps {
 const Output: React.FC<OutputProps> = ({ cv }) => {
     return (
         <div className="output">
-            <HeaderSection headerSection={cv.headerSection || {}} />
+            {cv.headerSection && (
+                <HeaderSection headerSection={cv.headerSection} />
+            )}
 
-            <IntroductionSection
-                introductionSection={cv.introductionSection || {}}
-            />
+            {cv.introductionSection && (
+                <IntroductionSection
+                    introductionSection={cv.introductionSection}
+                />
+            )}
 
-            <EducationSection educationSection={cv.educationSection || {}} />
+            {cv.educationSection && (
+                <EducationSection educationSection={cv.educationSection} />
+            )}
 
-            <ProjectSection projectSection={cv.projectSection || {}} />
+            {cv.projectSection && (
+                <ProjectSection projectSection={cv.projectSection} />
+            )}
 
-            <TechnicalSkillSection
-                technicalSkillSection={cv.technicalSkillSection || {}}
-            />
+            {cv.technicalSkillSection && (
+                <TechnicalSkillSection
+                    technicalSkillSection={cv.technicalSkillSection}
+                />
+            )}
 
-            <AchievementSection
-                achievementSection={cv.achievementSection || {}}
-            />
+            {cv.achievementSection && (
+                <AchievementSection
+                    achievementSection={cv.achievementSection}
+                />
+            )}
         </div>
     );
 };

@@ -13,67 +13,58 @@ const HeaderSection: React.FC<HeaderSectionProps> = ({ headerSection }) => {
         <div>
             <div className="container header-section-container">
                 <div className="left-container">
-                    <h1>{headerSection.name || "Your Name"}</h1>
-                    <span>
-                        Email:
-                        <a
-                            href={
-                                "mailto:" +
-                                (headerSection.email || "abc@xyz.com")
-                            }
-                        >
-                            {headerSection.email || "abc@xyz.com"}
-                        </a>
-                    </span>
-                    <span>
-                        Mobile:
-                        <span>(+{headerSection.countryCode || "91"})</span>
+                    {headerSection.name && <h1>{headerSection.name}</h1>}
+                    {headerSection.email && (
                         <span>
-                            {headerSection.phoneNumber || "98XXXXXXXXXX"}
+                            Email:
+                            <a href={"mailto:" + headerSection.email}>
+                                {headerSection.email}
+                            </a>
                         </span>
-                    </span>
+                    )}
+
+                    {(headerSection.countryCode ||
+                        headerSection.phoneNumber) && (
+                        <span>
+                            Mobile:
+                            {headerSection.countryCode && (
+                                <span>(+{headerSection.countryCode})</span>
+                            )}
+                            {headerSection.phoneNumber && (
+                                <span>{headerSection.phoneNumber}</span>
+                            )}
+                        </span>
+                    )}
                 </div>
 
                 <div className="right-container">
-                    <span>
-                        {headerSection.portfolioURL && (
-                            <>
-                                Portfolio:
-                                <a
-                                    href={headerSection.portfolioURL}
-                                    target="_blank"
-                                >
-                                    {TrimURL(headerSection.portfolioURL)}
-                                </a>
-                            </>
-                        )}
-                    </span>
-                    <span>
-                        {headerSection.githubURL && (
-                            <>
-                                Github:
-                                <a
-                                    href={headerSection.githubURL}
-                                    target="_blank"
-                                >
-                                    {TrimURL(headerSection.githubURL)}
-                                </a>
-                            </>
-                        )}
-                    </span>
-                    <span>
-                        {headerSection.linkedInURL && (
-                            <>
-                                LinkedIn:
-                                <a
-                                    href={headerSection.linkedInURL}
-                                    target="_blank"
-                                >
-                                    {TrimURL(headerSection.linkedInURL)}
-                                </a>
-                            </>
-                        )}
-                    </span>
+                    {headerSection.portfolioURL && (
+                        <span>
+                            Portfolio:
+                            <a
+                                href={headerSection.portfolioURL}
+                                target="_blank"
+                            >
+                                {TrimURL(headerSection.portfolioURL)}
+                            </a>
+                        </span>
+                    )}
+                    {headerSection.githubURL && (
+                        <span>
+                            Github:
+                            <a href={headerSection.githubURL} target="_blank">
+                                {TrimURL(headerSection.githubURL)}
+                            </a>
+                        </span>
+                    )}
+                    {headerSection.linkedInURL && (
+                        <span>
+                            LinkedIn:
+                            <a href={headerSection.linkedInURL} target="_blank">
+                                {TrimURL(headerSection.linkedInURL)}
+                            </a>
+                        </span>
+                    )}
                 </div>
             </div>
         </div>

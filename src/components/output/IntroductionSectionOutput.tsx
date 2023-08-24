@@ -14,9 +14,9 @@ const IntroductionSection: React.FC<IntroductionSectionProps> = ({
             <h2>Career Objective</h2>
             <hr />
             <div className="section-container">
-                <p>
-                    {introductionSection.careerObjective || "Career Objective"}
-                </p>
+                {introductionSection.careerObjective && (
+                    <p>{introductionSection.careerObjective}</p>
+                )}
             </div>
         </div>
     );

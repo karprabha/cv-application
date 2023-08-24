@@ -9,19 +9,33 @@ interface ProjectSectionProps {
 }
 
 const ProjectSection: React.FC<ProjectSectionProps> = ({ projectSection }) => {
-    const getParams = (index: number) => {
-        return projectSection.projects ? projectSection.projects[index] : {};
-    };
-
     return (
         <div>
-            <h2>Projects</h2>
-            <hr />
-            <div className="section-container">
-                <ProjectOutput project={getParams(0)} />
-                <ProjectOutput project={getParams(1)} />
-                <ProjectOutput project={getParams(2)} />
-            </div>
+            {projectSection.projects && (
+                <>
+                    <h2>Projects</h2>
+                    <hr />
+                    <div className="section-container">
+                        {projectSection.projects[0] && (
+                            <ProjectOutput
+                                project={projectSection.projects[0]}
+                            />
+                        )}
+
+                        {projectSection.projects[1] && (
+                            <ProjectOutput
+                                project={projectSection.projects[1]}
+                            />
+                        )}
+
+                        {projectSection.projects[2] && (
+                            <ProjectOutput
+                                project={projectSection.projects[2]}
+                            />
+                        )}
+                    </div>
+                </>
+            )}
         </div>
     );
 };

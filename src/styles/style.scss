@@ -18,10 +18,15 @@
     flex: 1;
     overflow-y: auto;
     height: 100vh;
+    box-sizing: border-box;
 }
 
 .editor {
     background-color: grey;
+}
+
+.output {
+    padding: 50px;
 }
 
 input,
