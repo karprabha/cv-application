@@ -48,7 +48,7 @@ const HeaderSection: React.FC<HeaderSectionProps> = ({
                         type="email"
                         keyName="email"
                         labelName="Email"
-                        placeholder="abc@xyz.com"
+                        placeholder="johndoe@notreal.com"
                         updateParentSection={updateHeaderSection}
                     />
 
