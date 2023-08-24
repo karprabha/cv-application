@@ -23,3 +23,7 @@
 .italic-text {
     font-style: italic;
 }
+
+.display-inline {
+    display: inline;
+}

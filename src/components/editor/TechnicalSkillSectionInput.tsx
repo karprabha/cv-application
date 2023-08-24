@@ -27,13 +27,6 @@ const TechnicalSkillSection: React.FC<TechnicalSkillSectionProps> = ({
 
             <Input
                 type="text"
-                keyName="webTechnologies"
-                placeholder="Web Technologies"
-                updateParentSection={updateTechnicalSkillSection}
-            />
-
-            <Input
-                type="text"
                 keyName="frontendFrameworks"
                 placeholder="Frontend Frameworks"
                 updateParentSection={updateTechnicalSkillSection}

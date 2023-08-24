@@ -11,21 +11,36 @@ const TechnicalSkillSection: React.FC<TechnicalSkillSectionProps> = ({
 }) => {
     return (
         <>
-            <p>
-                {technicalSkillSection.programmingLanguages ||
-                    "programmingLanguages"}
-            </p>
-            <p>{technicalSkillSection.webTechnologies || "webTechnologies"}</p>
-            <p>
-                {technicalSkillSection.frontendFrameworks ||
-                    "frontendFrameworks"}
-            </p>
-            <p>
-                {technicalSkillSection.developmentTools || "developmentTools"}
-            </p>
-            <p>
-                {technicalSkillSection.testingFramework || "testingFramework"}
-            </p>
+            {technicalSkillSection.programmingLanguages && (
+                <div>
+                    <h4 className="display-inline">Programming Languages: </h4>
+                    <span>{technicalSkillSection.programmingLanguages}</span>
+                </div>
+            )}
+            {technicalSkillSection.webTechnologies && (
+                <div>
+                    <h4 className="display-inline">Web Technologies: </h4>
+                    <span>{technicalSkillSection.webTechnologies}</span>
+                </div>
+            )}
+            {technicalSkillSection.frontendFrameworks && (
+                <div>
+                    <h4 className="display-inline">Frontend Frameworks: </h4>
+                    <span>{technicalSkillSection.frontendFrameworks}</span>
+                </div>
+            )}
+            {technicalSkillSection.developmentTools && (
+                <div>
+                    <h4 className="display-inline">Development Tools: </h4>
+                    <span>{technicalSkillSection.developmentTools}</span>
+                </div>
+            )}
+            {technicalSkillSection.testingFramework && (
+                <div>
+                    <h4 className="display-inline">Testing Frameworks: </h4>
+                    <span>{technicalSkillSection.testingFramework}</span>
+                </div>
+            )}
         </>
     );
 };

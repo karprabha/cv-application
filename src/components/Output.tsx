@@ -28,9 +28,11 @@ const Output: React.FC<OutputProps> = ({ cv }) => {
             <hr />
             <EducationSection educationSection={cv.educationSection || {}} />
 
-            <h2>Project</h2>
+            <h2>Projects</h2>
             <hr />
             <ProjectSection projectSection={cv.projectSection || {}} />
+
+            <h2>Technical Skills</h2>
             <hr />
             <TechnicalSkillSection
                 technicalSkillSection={cv.technicalSkillSection || {}}
