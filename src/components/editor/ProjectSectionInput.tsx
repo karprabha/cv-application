@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import ProjectInput from "../ProjectInput";
+import ProjectInput from "./ProjectInput";
 
 type updateProjectSectionFunction = (key: string, value: any) => void;
 

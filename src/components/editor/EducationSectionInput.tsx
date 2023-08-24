@@ -1,4 +1,4 @@
-import Input from "../Input";
+import Input from "./Input";
 
 type updateEducationSectionFunction = (key: string, value: any) => void;
 
