@@ -1,3 +1,5 @@
+import formatDate from "../../utils/formatDate";
+
 interface EducationSection {
     [key: string]: any;
 }
@@ -11,12 +13,22 @@ const EducationSection: React.FC<EducationSectionProps> = ({
 }) => {
     return (
         <>
-            <p>{educationSection.instituteName || "Institute Name"}</p>
-            <p>{educationSection.instituteAddress || "Institute Address"}</p>
-            <p>{educationSection.cgpa || "cgpa"}</p>
-            <p>{educationSection.course || "course"}</p>
-            <p>{educationSection.startDate || "startDate"}</p>
-            <p>{educationSection.endDate || "endDate"}</p>
+            <div className="container">
+                <h3>{educationSection.instituteName || "Institute Name"}</h3>
+                <span>
+                    {educationSection.instituteAddress || "Institute Address"}
+                </span>
+            </div>
+            <div className="container italic-text">
+                <span>
+                    {educationSection.course || "course"} -
+                    {educationSection.cgpa || "cgpa"}
+                </span>
+                <span>
+                    {formatDate(educationSection.startDate || "2023-11-01")}-
+                    {formatDate(educationSection.endDate || "2023-11-01")}
+                </span>
+            </div>
         </>
     );
 };

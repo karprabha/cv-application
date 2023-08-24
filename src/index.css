@@ -6,7 +6,7 @@
 .container {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
 }
 
 .left-container {
@@ -17,4 +17,8 @@
 .right-container {
     display: flex;
     flex-direction: column;
+}
+
+.italic-text {
+    font-style: italic;
 }
