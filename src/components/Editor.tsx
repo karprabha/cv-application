@@ -3,6 +3,7 @@ import HeaderSection from "./editor/HeaderSectionInput";
 import IntroductionSection from "./editor/IntroductionSectionInput";
 import EducationSection from "./editor/EducationSectionInput";
 import ProjectSection from "./editor/ProjectSectionInput";
+import TechnicalSkillSection from "./editor/TechnicalSkillSectionInput";
 
 type UpdateCVFunction = (key: string, value: any) => void;
 
@@ -15,13 +16,21 @@ const Editor: React.FC<EditorProps> = ({ updateCV }) => {
     const [introductionSection, setIntroductionSection] = useState({});
     const [educationSection, setEducationSection] = useState({});
     const [projectSection, setProjectSection] = useState({});
+    const [technicalSkillSection, setTechnicalSkillSection] = useState({});
 
     useEffect(() => {
         updateCV("headerSection", headerSection);
         updateCV("introductionSection", introductionSection);
         updateCV("educationSection", educationSection);
         updateCV("projectSection", projectSection);
-    }, [headerSection, introductionSection, educationSection, projectSection]);
+        updateCV("technicalSkillSection", technicalSkillSection);
+    }, [
+        headerSection,
+        introductionSection,
+        educationSection,
+        projectSection,
+        technicalSkillSection,
+    ]);
 
     const updateHeaderSection = (key: string, value: any) => {
         setHeaderSection((prevHeaderSection) => ({
@@ -51,6 +60,13 @@ const Editor: React.FC<EditorProps> = ({ updateCV }) => {
         }));
     };
 
+    const updateTechnicalSkillSection = (key: string, value: any) => {
+        setTechnicalSkillSection((prevTechnicalSkillSection) => ({
+            ...prevTechnicalSkillSection,
+            [key]: value,
+        }));
+    };
+
     return (
         <div className="editor">
             <HeaderSection updateHeaderSection={updateHeaderSection} />
@@ -63,6 +79,9 @@ const Editor: React.FC<EditorProps> = ({ updateCV }) => {
             <hr />
             <ProjectSection updateProjectSection={updateProjectSection} />
             <hr />
+            <TechnicalSkillSection
+                updateTechnicalSkillSection={updateTechnicalSkillSection}
+            />
         </div>
     );
 };
