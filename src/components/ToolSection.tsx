@@ -15,13 +15,13 @@ const ToolSection: React.FC<ToolSectionProps> = ({ updateFont }) => {
         <div className="input-section-container tool-section">
             <div className="font-select-btn">
                 <button type="button" onClick={() => updateFont(fontList[0])}>
-                    sans-serif 1
+                    serif
                 </button>
                 <button type="button" onClick={() => updateFont(fontList[1])}>
-                    sans-serif 2
+                    sans-serif 1
                 </button>
                 <button type="button" onClick={() => updateFont(fontList[2])}>
-                    serif
+                    sans-serif 2
                 </button>
             </div>
 
