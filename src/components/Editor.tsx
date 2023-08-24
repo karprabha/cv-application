@@ -81,23 +81,18 @@ const Editor: React.FC<EditorProps> = ({ updateCV }) => {
     return (
         <div className="editor">
             <HeaderSection updateHeaderSection={updateHeaderSection} />
-            <hr />
 
             <IntroductionSection
                 updateIntroductionSection={updateIntroductionSection}
             />
-            <hr />
 
             <EducationSection updateEducationSection={updateEducationSection} />
-            <hr />
 
             <ProjectSection updateProjectSection={updateProjectSection} />
-            <hr />
 
             <TechnicalSkillSection
                 updateTechnicalSkillSection={updateTechnicalSkillSection}
             />
-            <hr />
 
             <AchievementSection
                 updateAchievementSection={updateAchievementSection}
