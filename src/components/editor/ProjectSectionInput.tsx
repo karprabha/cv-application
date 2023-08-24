@@ -25,9 +25,29 @@ const ProjectSection: React.FC<ProjectSectionProps> = ({
 
     return (
         <div className="input-container">
-            <ProjectInput projectId={0} updateProjectSection={updateProjects} />
-            <ProjectInput projectId={1} updateProjectSection={updateProjects} />
-            <ProjectInput projectId={2} updateProjectSection={updateProjects} />
+            <div className="project-input-container">
+                <h2>Project 1</h2>
+                <ProjectInput
+                    projectId={0}
+                    updateProjectSection={updateProjects}
+                />
+            </div>
+
+            <div className="project-input-container">
+                <h2>Project 2</h2>
+                <ProjectInput
+                    projectId={1}
+                    updateProjectSection={updateProjects}
+                />
+            </div>
+
+            <div className="project-input-container">
+                <h2>Project 3</h2>
+                <ProjectInput
+                    projectId={2}
+                    updateProjectSection={updateProjects}
+                />
+            </div>
         </div>
     );
 };
