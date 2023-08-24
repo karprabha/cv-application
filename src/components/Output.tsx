@@ -11,11 +11,12 @@ interface CV {
 
 interface OutputProps {
     cv: CV;
+    font: string;
 }
 
-const Output: React.FC<OutputProps> = ({ cv }) => {
+const Output: React.FC<OutputProps> = ({ cv, font }) => {
     return (
-        <div className="output">
+        <div className={`output ${font}`}>
             {cv.headerSection && (
                 <HeaderSection headerSection={cv.headerSection} />
             )}

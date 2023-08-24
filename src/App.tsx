@@ -4,17 +4,26 @@ import Output from "./components/Output";
 
 const App = () => {
     const [cv, setCV] = useState({});
+    const [font, setFont] = useState("classic-serif");
 
     const updateCV = (key: string, value: any) => {
         setCV((prevCV) => ({ ...prevCV, [key]: value }));
     };
 
-    console.log(cv);
+    const updateFont = (fontName: string) => {
+        setFont(fontName);
+    };
 
     return (
         <>
-            <Editor updateCV={updateCV} />
-            <Output cv={cv} />
+            <header>
+                <h1>CV-Application</h1>
+            </header>
+
+            <main>
+                <Editor updateFont={updateFont} updateCV={updateCV} />
+                <Output font={font} cv={cv} />
+            </main>
         </>
     );
 };

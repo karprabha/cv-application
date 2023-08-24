@@ -1,24 +1,29 @@
 @use "partials";
 
-#root {
-    display: flex;
-}
-
 * {
     margin: 0;
     padding: 0;
+}
+
+header {
+    padding: 10px 0;
+    background-color: aquamarine;
+}
+
+main {
+    display: flex;
 }
 
 .editor,
 .output {
     flex: 1;
     overflow-y: auto;
-    height: 100vh;
+    height: calc(100vh - 57px);
     box-sizing: border-box;
 }
 
 .editor {
-    background-color: grey;
+    background-color: aqua;
     font-family:
         system-ui,
         -apple-system,
@@ -75,4 +80,8 @@ textarea {
 
 textarea {
     resize: none;
+}
+
+button {
+    font-family: inherit;
 }

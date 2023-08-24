@@ -5,14 +5,17 @@ import EducationSection from "./editor/EducationSectionInput";
 import ProjectSection from "./editor/ProjectSectionInput";
 import TechnicalSkillSection from "./editor/TechnicalSkillSectionInput";
 import AchievementSection from "./editor/AchievementInput";
+import ToolSection from "./ToolSection";
 
 type UpdateCVFunction = (key: string, value: any) => void;
+type UpdateFontFunction = (fontName: string) => void;
 
 interface EditorProps {
     updateCV: UpdateCVFunction;
+    updateFont: UpdateFontFunction;
 }
 
-const Editor: React.FC<EditorProps> = ({ updateCV }) => {
+const Editor: React.FC<EditorProps> = ({ updateCV, updateFont }) => {
     const [headerSection, setHeaderSection] = useState({});
     const [introductionSection, setIntroductionSection] = useState({});
     const [educationSection, setEducationSection] = useState({});
@@ -80,6 +83,8 @@ const Editor: React.FC<EditorProps> = ({ updateCV }) => {
 
     return (
         <div className="editor">
+            <ToolSection updateFont={updateFont} />
+
             <HeaderSection updateHeaderSection={updateHeaderSection} />
 
             <IntroductionSection

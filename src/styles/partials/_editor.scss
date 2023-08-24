@@ -43,3 +43,16 @@
 .project-input-container {
     margin: 30px auto;
 }
+
+.tool-section {
+    display: flex;
+    justify-content: space-between;
+    .font-select-btn {
+        display: flex;
+        gap: 10px;
+    }
+    .resume-related-btn {
+        display: flex;
+        gap: 10px;
+    }
+}
