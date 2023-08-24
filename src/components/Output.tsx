@@ -17,10 +17,12 @@ const Output: React.FC<OutputProps> = ({ cv }) => {
     return (
         <div className="output">
             <HeaderSection headerSection={cv.headerSection || {}} />
+            Career Objective
             <hr />
             <IntroductionSection
                 introductionSection={cv.introductionSection || {}}
             />
+            Education
             <hr />
             <EducationSection educationSection={cv.educationSection || {}} />
             <hr />

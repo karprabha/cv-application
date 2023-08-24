@@ -10,9 +10,9 @@ const IntroductionSection: React.FC<IntroductionSectionProps> = ({
     introductionSection,
 }) => {
     return (
-        <>
+        <div>
             <p>{introductionSection.careerObjective || "Career Objective"}</p>
-        </>
+        </div>
     );
 };
 
