@@ -9,41 +9,50 @@ interface ProjectOutputProps {
 const ProjectOutput: React.FC<ProjectOutputProps> = ({ project }) => {
     return (
         <>
-            <p>{project.title || "Title"}</p>
-            <p>{project.technologies || "technologies"}</p>
-            <p>
-                {project.demoURL && (
-                    <>
-                        <a href={project.demoURL} target="_blank">
-                            demoURL
-                        </a>
-                    </>
-                )}
-            </p>
-            <p>
-                {project.repositoryURL && (
-                    <>
-                        <a href={project.repositoryURL} target="_blank">
-                            repositoryURL
-                        </a>
-                    </>
-                )}
-            </p>
-            <p>
-                {project.npmURL && (
-                    <>
-                        <a href={project.npmURL} target="_blank">
-                            npmURL
-                        </a>
-                    </>
-                )}
-            </p>
-            <p>{project.description1}</p>
-            <p>{project.description2}</p>
-            <p>{project.description3}</p>
-            <p>{project.description4}</p>
-            <p>{project.description5}</p>
-            <p>{project.description6}</p>
+            <div className="container">
+                <h3>{project.title || "Title"}</h3>
+                <span className="italic-text">
+                    {project.technologies || "technologies"}
+                </span>
+
+                <div>
+                    <span>
+                        {project.demoURL && (
+                            <>
+                                <a href={project.demoURL} target="_blank">
+                                    Live Demo
+                                </a>
+                            </>
+                        )}
+                    </span>
+                    <span>
+                        {project.repositoryURL && (
+                            <>
+                                <a href={project.repositoryURL} target="_blank">
+                                    Repository
+                                </a>
+                            </>
+                        )}
+                    </span>
+                    <span>
+                        {project.npmURL && (
+                            <>
+                                <a href={project.npmURL} target="_blank">
+                                    NPM
+                                </a>
+                            </>
+                        )}
+                    </span>
+                </div>
+            </div>
+            <ul>
+                {project.description1 && <li>{project.description1}</li>}
+                {project.description2 && <li>{project.description2}</li>}
+                {project.description3 && <li>{project.description3}</li>}
+                {project.description4 && <li>{project.description4}</li>}
+                {project.description5 && <li>{project.description5}</li>}
+                {project.description6 && <li>{project.description6}</li>}
+            </ul>
         </>
     );
 };
