@@ -4,6 +4,16 @@
     margin-bottom: 10px;
 }
 
+.dropdown-toggle-btn {
+    border: none;
+    background-color: white;
+    font-size: 1rem;
+    padding: 0 5px;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
 .dropdown-container {
     display: grid;
     grid-template-rows: 0fr;

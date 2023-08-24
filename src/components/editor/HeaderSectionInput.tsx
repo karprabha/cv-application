@@ -20,7 +20,12 @@ const HeaderSection: React.FC<HeaderSectionProps> = ({
         <div className="input-section-container">
             <div className="section-header-container">
                 <h2>Header Section</h2>
-                <button onClick={toggleDropdown}>Toggle Dropdown</button>
+                <button
+                    className="dropdown-toggle-btn"
+                    onClick={toggleDropdown}
+                >
+                    {dropdownOpen ? "▲" : "▼"}
+                </button>
             </div>
 
             <div

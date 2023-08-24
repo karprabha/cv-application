@@ -29,7 +29,12 @@ const IntroductionSection: React.FC<IntroductionSectionProps> = ({
         <div className="input-section-container">
             <div className="section-header-container">
                 <h2>Career Objective Section</h2>
-                <button onClick={toggleDropdown}>Toggle Dropdown</button>
+                <button
+                    className="dropdown-toggle-btn"
+                    onClick={toggleDropdown}
+                >
+                    {dropdownOpen ? "▲" : "▼"}
+                </button>
             </div>
 
             <div

@@ -34,7 +34,12 @@ const ProjectInput: React.FC<ProjectInputProps> = ({
         <div className="project-input-container">
             <div className="section-header-container">
                 <h2>Project {projectId + 1}</h2>
-                <button onClick={toggleDropdown}>Toggle Dropdown</button>
+                <button
+                    className="dropdown-toggle-btn"
+                    onClick={toggleDropdown}
+                >
+                    {dropdownOpen ? "▲" : "▼"}
+                </button>
             </div>
 
             <div
