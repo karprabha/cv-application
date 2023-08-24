@@ -10,7 +10,7 @@ const EducationSection: React.FC<EducationSectionProps> = ({
     updateEducationSection,
 }) => {
     return (
-        <>
+        <div className="input-container">
             <Input
                 type="text"
                 keyName="instituteName"
@@ -56,7 +56,7 @@ const EducationSection: React.FC<EducationSectionProps> = ({
                 labelName="End Date (or expected)"
                 updateParentSection={updateEducationSection}
             />
-        </>
+        </div>
     );
 };
 

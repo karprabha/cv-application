@@ -21,16 +21,17 @@ const IntroductionSection: React.FC<IntroductionSectionProps> = ({
     };
 
     return (
-        <>
+        <div className="input-container">
             <label>
                 <h3>Career Objective</h3>
                 <textarea
+                    rows={8}
                     value={inputValue}
                     onChange={updateValue}
                     placeholder="Career Objective"
                 />
             </label>
-        </>
+        </div>
     );
 };
 

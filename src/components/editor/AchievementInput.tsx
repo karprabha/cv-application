@@ -10,7 +10,7 @@ const AchievementSection: React.FC<AchievementSectionProps> = ({
     updateAchievementSection,
 }) => {
     return (
-        <>
+        <div className="input-container">
             <Input
                 type="text"
                 keyName="achievement1"
@@ -50,7 +50,7 @@ const AchievementSection: React.FC<AchievementSectionProps> = ({
                 placeholder="Achievement 5"
                 updateParentSection={updateAchievementSection}
             />
-        </>
+        </div>
     );
 };
 

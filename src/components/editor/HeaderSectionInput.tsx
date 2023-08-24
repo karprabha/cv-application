@@ -10,7 +10,7 @@ const HeaderSection: React.FC<HeaderSectionProps> = ({
     updateHeaderSection,
 }) => {
     return (
-        <div>
+        <div className="input-container">
             <Input
                 type="text"
                 keyName="name"

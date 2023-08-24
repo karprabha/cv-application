@@ -10,7 +10,7 @@ const TechnicalSkillSection: React.FC<TechnicalSkillSectionProps> = ({
     updateTechnicalSkillSection,
 }) => {
     return (
-        <>
+        <div className="input-container">
             <Input
                 type="text"
                 keyName="programmingLanguages"
@@ -50,7 +50,7 @@ const TechnicalSkillSection: React.FC<TechnicalSkillSectionProps> = ({
                 placeholder="Testing Framework"
                 updateParentSection={updateTechnicalSkillSection}
             />
-        </>
+        </div>
     );
 };
 

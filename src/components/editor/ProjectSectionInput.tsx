@@ -24,11 +24,11 @@ const ProjectSection: React.FC<ProjectSectionProps> = ({
     };
 
     return (
-        <>
+        <div className="input-container">
             <ProjectInput projectId={0} updateProjectSection={updateProjects} />
             <ProjectInput projectId={1} updateProjectSection={updateProjects} />
             <ProjectInput projectId={2} updateProjectSection={updateProjects} />
-        </>
+        </div>
     );
 };
 

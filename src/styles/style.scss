@@ -7,8 +7,17 @@
     flex: 1;
 }
 
-input {
+input,
+textarea {
+    box-sizing: border-box;
     display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 5px;
+}
+
+textarea {
+    resize: none;
 }
 
 .container {
@@ -50,4 +59,9 @@ input {
 
 ul {
     margin-left: 36px;
+}
+
+.input-container {
+    width: 80%;
+    margin: auto;
 }
