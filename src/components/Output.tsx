@@ -1,5 +1,6 @@
 import HeaderSection from "./output/HeaderSectionOutput";
 import IntroductionSection from "./output/IntroductionSectionOutput";
+import EducationSection from "./output/EducationSectionOutput";
 
 interface CV {
     [key: string]: any;
@@ -17,6 +18,8 @@ const Output: React.FC<OutputProps> = ({ cv }) => {
             <IntroductionSection
                 introductionSection={cv.introductionSection || {}}
             />
+            <hr />
+            <EducationSection educationSection={cv.educationSection || {}} />
             <hr />
         </div>
     );
