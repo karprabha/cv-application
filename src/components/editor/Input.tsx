@@ -6,6 +6,7 @@ interface InputProps {
     updateParentSection: updateParentSectionFunction;
     type: string;
     keyName: string;
+    labelName: string;
     placeholder?: string;
     maxLength?: number;
 }
@@ -13,6 +14,7 @@ interface InputProps {
 const Input: React.FC<InputProps> = ({
     type,
     keyName,
+    labelName,
     updateParentSection,
     placeholder,
     maxLength,
@@ -31,12 +33,15 @@ const Input: React.FC<InputProps> = ({
     };
 
     return (
-        <input
-            type={type}
-            value={inputValue}
-            onChange={updateValue}
-            placeholder={placeholder}
-        />
+        <label>
+            <h3>{labelName}</h3>
+            <input
+                type={type}
+                value={inputValue}
+                onChange={updateValue}
+                placeholder={placeholder}
+            />
+        </label>
     );
 };
 

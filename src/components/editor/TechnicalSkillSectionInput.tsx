@@ -14,6 +14,7 @@ const TechnicalSkillSection: React.FC<TechnicalSkillSectionProps> = ({
             <Input
                 type="text"
                 keyName="programmingLanguages"
+                labelName="Programming Languages"
                 placeholder="Programming Languages"
                 updateParentSection={updateTechnicalSkillSection}
             />
@@ -21,6 +22,7 @@ const TechnicalSkillSection: React.FC<TechnicalSkillSectionProps> = ({
             <Input
                 type="text"
                 keyName="webTechnologies"
+                labelName="Web Technologies"
                 placeholder="Web Technologies"
                 updateParentSection={updateTechnicalSkillSection}
             />
@@ -28,6 +30,7 @@ const TechnicalSkillSection: React.FC<TechnicalSkillSectionProps> = ({
             <Input
                 type="text"
                 keyName="frontendFrameworks"
+                labelName="Frontend Frameworks"
                 placeholder="Frontend Frameworks"
                 updateParentSection={updateTechnicalSkillSection}
             />
@@ -35,6 +38,7 @@ const TechnicalSkillSection: React.FC<TechnicalSkillSectionProps> = ({
             <Input
                 type="text"
                 keyName="developmentTools"
+                labelName="Development Tools"
                 placeholder="Development Tools"
                 updateParentSection={updateTechnicalSkillSection}
             />
@@ -42,6 +46,7 @@ const TechnicalSkillSection: React.FC<TechnicalSkillSectionProps> = ({
             <Input
                 type="text"
                 keyName="testingFramework"
+                labelName="Testing Framework"
                 placeholder="Testing Framework"
                 updateParentSection={updateTechnicalSkillSection}
             />

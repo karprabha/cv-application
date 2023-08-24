@@ -22,11 +22,14 @@ const IntroductionSection: React.FC<IntroductionSectionProps> = ({
 
     return (
         <>
-            <textarea
-                value={inputValue}
-                onChange={updateValue}
-                placeholder="Career Objective"
-            />
+            <label>
+                <h3>Career Objective</h3>
+                <textarea
+                    value={inputValue}
+                    onChange={updateValue}
+                    placeholder="Career Objective"
+                />
+            </label>
         </>
     );
 };
