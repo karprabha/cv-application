@@ -1,4 +1,4 @@
-import ProjectOutput from "../ProjectOutput";
+import ProjectOutput from "./ProjectOutput";
 
 interface ProjectSection {
     [key: string]: any;

@@ -4,6 +4,7 @@ import IntroductionSection from "./editor/IntroductionSectionInput";
 import EducationSection from "./editor/EducationSectionInput";
 import ProjectSection from "./editor/ProjectSectionInput";
 import TechnicalSkillSection from "./editor/TechnicalSkillSectionInput";
+import AchievementSection from "./editor/AchievementInput";
 
 type UpdateCVFunction = (key: string, value: any) => void;
 
@@ -17,6 +18,7 @@ const Editor: React.FC<EditorProps> = ({ updateCV }) => {
     const [educationSection, setEducationSection] = useState({});
     const [projectSection, setProjectSection] = useState({});
     const [technicalSkillSection, setTechnicalSkillSection] = useState({});
+    const [achievementSection, setAchievementSection] = useState({});
 
     useEffect(() => {
         updateCV("headerSection", headerSection);
@@ -24,12 +26,14 @@ const Editor: React.FC<EditorProps> = ({ updateCV }) => {
         updateCV("educationSection", educationSection);
         updateCV("projectSection", projectSection);
         updateCV("technicalSkillSection", technicalSkillSection);
+        updateCV("achievementSection", achievementSection);
     }, [
         headerSection,
         introductionSection,
         educationSection,
         projectSection,
         technicalSkillSection,
+        achievementSection,
     ]);
 
     const updateHeaderSection = (key: string, value: any) => {
@@ -67,6 +71,13 @@ const Editor: React.FC<EditorProps> = ({ updateCV }) => {
         }));
     };
 
+    const updateAchievementSection = (key: string, value: any) => {
+        setAchievementSection((prevAchievementSection) => ({
+            ...prevAchievementSection,
+            [key]: value,
+        }));
+    };
+
     return (
         <div className="editor">
             <HeaderSection updateHeaderSection={updateHeaderSection} />
@@ -81,6 +92,10 @@ const Editor: React.FC<EditorProps> = ({ updateCV }) => {
             <hr />
             <TechnicalSkillSection
                 updateTechnicalSkillSection={updateTechnicalSkillSection}
+            />
+            <hr />
+            <AchievementSection
+                updateAchievementSection={updateAchievementSection}
             />
         </div>
     );
