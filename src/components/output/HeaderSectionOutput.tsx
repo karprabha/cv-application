@@ -18,32 +18,32 @@ const HeaderSection: React.FC<HeaderSectionProps> = ({ headerSection }) => {
 
             <h2>
                 {headerSection.portfolioURL && (
-                    <span>
+                    <>
                         Portfolio:
                         <a href={headerSection.portfolioURL} target="_blank">
                             {TrimURL(headerSection.portfolioURL)}
                         </a>
-                    </span>
+                    </>
                 )}
             </h2>
             <h2>
                 {headerSection.githubURL && (
-                    <span>
+                    <>
                         Github:
                         <a href={headerSection.githubURL} target="_blank">
                             {TrimURL(headerSection.githubURL)}
                         </a>
-                    </span>
+                    </>
                 )}
             </h2>
             <h2>
                 {headerSection.linkedInURL && (
-                    <span>
+                    <>
                         LinkedIn:
                         <a href={headerSection.linkedInURL} target="_blank">
                             {TrimURL(headerSection.linkedInURL)}
                         </a>
-                    </span>
+                    </>
                 )}
             </h2>
         </>
