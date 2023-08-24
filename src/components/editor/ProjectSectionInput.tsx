@@ -11,10 +11,15 @@ const ProjectSection: React.FC<ProjectSectionProps> = ({
     updateProjectSection,
 }) => {
     const [projects, setProjects] = useState([{}, {}, {}]);
+    const [dropdownOpen, setDropdownOpen] = useState(false);
 
     useEffect(() => {
         updateProjectSection("projects", projects);
     }, [projects]);
+
+    const toggleDropdown = () => {
+        setDropdownOpen((prevOpen) => !prevOpen);
+    };
 
     const updateProjects = (index: number, newValue: any) => {
         const newProjects = projects.map((value, idx) =>
@@ -24,29 +29,35 @@ const ProjectSection: React.FC<ProjectSectionProps> = ({
     };
 
     return (
-        <div className="input-container">
-            <div className="project-input-container">
-                <h2>Project 1</h2>
-                <ProjectInput
-                    projectId={0}
-                    updateProjectSection={updateProjects}
-                />
+        <div className="input-section-container">
+            <div className="section-header-container">
+                <h2>Projects Section</h2>
+                <button onClick={toggleDropdown}>Toggle Dropdown</button>
             </div>
 
-            <div className="project-input-container">
-                <h2>Project 2</h2>
-                <ProjectInput
-                    projectId={1}
-                    updateProjectSection={updateProjects}
-                />
-            </div>
+            <div
+                className={
+                    dropdownOpen
+                        ? "dropdown-container show-dropdown"
+                        : "dropdown-container"
+                }
+            >
+                <div className="input-container">
+                    <ProjectInput
+                        projectId={0}
+                        updateProjectSection={updateProjects}
+                    />
 
-            <div className="project-input-container">
-                <h2>Project 3</h2>
-                <ProjectInput
-                    projectId={2}
-                    updateProjectSection={updateProjects}
-                />
+                    <ProjectInput
+                        projectId={1}
+                        updateProjectSection={updateProjects}
+                    />
+
+                    <ProjectInput
+                        projectId={2}
+                        updateProjectSection={updateProjects}
+                    />
+                </div>
             </div>
         </div>
     );

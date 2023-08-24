@@ -80,48 +80,28 @@ const Editor: React.FC<EditorProps> = ({ updateCV }) => {
 
     return (
         <div className="editor">
-            <div className="input-section-container">
-                <h2>Header Section</h2>
-                <HeaderSection updateHeaderSection={updateHeaderSection} />
-            </div>
+            <HeaderSection updateHeaderSection={updateHeaderSection} />
             <hr />
 
-            <div className="input-section-container">
-                <h2>Career Objective Section</h2>
-                <IntroductionSection
-                    updateIntroductionSection={updateIntroductionSection}
-                />
-            </div>
+            <IntroductionSection
+                updateIntroductionSection={updateIntroductionSection}
+            />
             <hr />
 
-            <div className="input-section-container">
-                <h2>Education Section</h2>
-                <EducationSection
-                    updateEducationSection={updateEducationSection}
-                />
-            </div>
+            <EducationSection updateEducationSection={updateEducationSection} />
             <hr />
 
-            <div className="input-section-container">
-                <h2>Projects Section</h2>
-                <ProjectSection updateProjectSection={updateProjectSection} />
-            </div>
+            <ProjectSection updateProjectSection={updateProjectSection} />
             <hr />
 
-            <div className="input-section-container">
-                <h2>Technical Skills Section</h2>
-                <TechnicalSkillSection
-                    updateTechnicalSkillSection={updateTechnicalSkillSection}
-                />
-            </div>
+            <TechnicalSkillSection
+                updateTechnicalSkillSection={updateTechnicalSkillSection}
+            />
             <hr />
 
-            <div className="input-section-container">
-                <h2>Achievement Section</h2>
-                <AchievementSection
-                    updateAchievementSection={updateAchievementSection}
-                />
-            </div>
+            <AchievementSection
+                updateAchievementSection={updateAchievementSection}
+            />
         </div>
     );
 };
