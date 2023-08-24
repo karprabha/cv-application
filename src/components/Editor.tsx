@@ -9,13 +9,19 @@ import ToolSection from "./ToolSection";
 
 type UpdateCVFunction = (key: string, value: any) => void;
 type UpdateFontFunction = (fontName: string) => void;
+type loadSampleCVFunction = () => void;
 
 interface EditorProps {
     updateCV: UpdateCVFunction;
     updateFont: UpdateFontFunction;
+    loadSampleCV: loadSampleCVFunction;
 }
 
-const Editor: React.FC<EditorProps> = ({ updateCV, updateFont }) => {
+const Editor: React.FC<EditorProps> = ({
+    updateCV,
+    updateFont,
+    loadSampleCV,
+}) => {
     const [headerSection, setHeaderSection] = useState({});
     const [introductionSection, setIntroductionSection] = useState({});
     const [educationSection, setEducationSection] = useState({});
@@ -83,7 +89,7 @@ const Editor: React.FC<EditorProps> = ({ updateCV, updateFont }) => {
 
     return (
         <div className="editor">
-            <ToolSection updateFont={updateFont} />
+            <ToolSection updateFont={updateFont} loadSampleCV={loadSampleCV} />
 
             <HeaderSection updateHeaderSection={updateHeaderSection} />
 

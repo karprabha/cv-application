@@ -1,10 +1,15 @@
 type UpdateFontFunction = (fontName: string) => void;
+type loadSampleCVFunction = () => void;
 
 interface ToolSectionProps {
     updateFont: UpdateFontFunction;
+    loadSampleCV: loadSampleCVFunction;
 }
 
-const ToolSection: React.FC<ToolSectionProps> = ({ updateFont }) => {
+const ToolSection: React.FC<ToolSectionProps> = ({
+    updateFont,
+    loadSampleCV,
+}) => {
     const fontList = [
         "classic-serif",
         "modern-sans-serif",
@@ -26,7 +31,9 @@ const ToolSection: React.FC<ToolSectionProps> = ({ updateFont }) => {
             </div>
 
             <div className="resume-related-btn">
-                <button type="button">Load Sample</button>
+                <button type="button" onClick={() => loadSampleCV()}>
+                    Load Sample
+                </button>
                 <button type="button">Download PDF</button>
             </div>
         </div>
