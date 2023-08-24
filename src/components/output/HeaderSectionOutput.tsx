@@ -24,6 +24,7 @@ const HeaderSection: React.FC<HeaderSectionProps> = ({ headerSection }) => {
                     </a>
                 </span>
                 <span>
+                    Mobile:
                     <span>(+{headerSection.countryCode || "91"})</span>
                     <span>{headerSection.phoneNumber || "98XXXXXXXXXX"}</span>
                 </span>
