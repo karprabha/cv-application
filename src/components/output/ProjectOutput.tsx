@@ -8,7 +8,7 @@ interface ProjectOutputProps {
 
 const ProjectOutput: React.FC<ProjectOutputProps> = ({ project }) => {
     return (
-        <>
+        <div>
             <div className="container">
                 <h3>{project.title || "Title"}</h3>
                 <span className="italic-text">
@@ -59,7 +59,7 @@ const ProjectOutput: React.FC<ProjectOutputProps> = ({ project }) => {
                 {project.description5 && <li>{project.description5}</li>}
                 {project.description6 && <li>{project.description6}</li>}
             </ul>
-        </>
+        </div>
     );
 };
 

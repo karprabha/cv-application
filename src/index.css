@@ -32,7 +32,11 @@
 }
 
 .section-container {
-    margin-left: 18px;
+    margin: 10px 0 10px 18px;
+}
+
+.header-section-container {
+    margin-bottom: 10px;
 }
 
 ul {

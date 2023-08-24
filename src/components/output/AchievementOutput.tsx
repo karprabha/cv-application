@@ -11,6 +11,8 @@ const AchievementSection: React.FC<AchievementSectionProps> = ({
 }) => {
     return (
         <div>
+            <h2>Achievements</h2>
+            <hr />
             <div className="section-container">
                 <ul>
                     {achievementSection.achievement1 && (
