@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 
-type updateHeaderSectionFunction = (key: string, value: any) => void;
+type updateParentSectionFunction = (key: string, value: any) => void;
 
 interface InputProps {
-    updateHeaderSection: updateHeaderSectionFunction;
+    updateParentSection: updateParentSectionFunction;
     type: string;
     keyName: string;
     placeholder?: string;
@@ -13,14 +13,14 @@ interface InputProps {
 const Input: React.FC<InputProps> = ({
     type,
     keyName,
-    updateHeaderSection,
+    updateParentSection,
     placeholder,
     maxLength,
 }) => {
     const [inputValue, setInputValue] = useState("");
 
     useEffect(() => {
-        updateHeaderSection(keyName, inputValue);
+        updateParentSection(keyName, inputValue);
     }, [inputValue]);
 
     const updateValue = (event: React.ChangeEvent<HTMLInputElement>) => {

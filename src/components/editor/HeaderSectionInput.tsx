@@ -15,13 +15,13 @@ const HeaderSection: React.FC<HeaderSectionProps> = ({
                 type="text"
                 keyName="name"
                 placeholder="Your Name"
-                updateHeaderSection={updateHeaderSection}
+                updateParentSection={updateHeaderSection}
             />
             <Input
                 type="email"
                 keyName="email"
                 placeholder="abc@xyz.com"
-                updateHeaderSection={updateHeaderSection}
+                updateParentSection={updateHeaderSection}
             />
 
             <Input
@@ -29,7 +29,7 @@ const HeaderSection: React.FC<HeaderSectionProps> = ({
                 keyName="countryCode"
                 maxLength={4}
                 placeholder="91"
-                updateHeaderSection={updateHeaderSection}
+                updateParentSection={updateHeaderSection}
             />
 
             <Input
@@ -37,28 +37,28 @@ const HeaderSection: React.FC<HeaderSectionProps> = ({
                 keyName="phoneNumber"
                 maxLength={10}
                 placeholder="98XXXXXXXX"
-                updateHeaderSection={updateHeaderSection}
+                updateParentSection={updateHeaderSection}
             />
 
             <Input
                 type="text"
                 keyName="portfolioURL"
                 placeholder="https://www.portfolio.me"
-                updateHeaderSection={updateHeaderSection}
+                updateParentSection={updateHeaderSection}
             />
 
             <Input
                 type="text"
                 keyName="githubURL"
                 placeholder="https://www.github.com/username"
-                updateHeaderSection={updateHeaderSection}
+                updateParentSection={updateHeaderSection}
             />
 
             <Input
                 type="text"
                 keyName="linkedInURL"
                 placeholder="https://www.linkedin.com/in/username"
-                updateHeaderSection={updateHeaderSection}
+                updateParentSection={updateHeaderSection}
             />
         </>
     );
