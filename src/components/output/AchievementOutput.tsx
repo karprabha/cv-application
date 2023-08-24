@@ -11,11 +11,26 @@ const AchievementSection: React.FC<AchievementSectionProps> = ({
 }) => {
     return (
         <>
-            <p>{achievementSection.achievement1 || "achievement"}</p>
-            <p>{achievementSection.achievement2 || "achievement"}</p>
-            <p>{achievementSection.achievement3 || "achievement"}</p>
-            <p>{achievementSection.achievement4 || "achievement"}</p>
-            <p>{achievementSection.achievement5 || "achievement"}</p>
+            <ul>
+                {achievementSection.achievement1 && (
+                    <li>{achievementSection.achievement1}</li>
+                )}
+                {achievementSection.achievement2 && (
+                    <li>{achievementSection.achievement2}</li>
+                )}
+                {achievementSection.achievement3 && (
+                    <li>{achievementSection.achievement3}</li>
+                )}
+                {achievementSection.achievement4 && (
+                    <li>{achievementSection.achievement4}</li>
+                )}
+                {achievementSection.achievement5 && (
+                    <li>{achievementSection.achievement5}</li>
+                )}
+                {achievementSection.achievement6 && (
+                    <li>{achievementSection.achievement6}</li>
+                )}
+            </ul>
         </>
     );
 };

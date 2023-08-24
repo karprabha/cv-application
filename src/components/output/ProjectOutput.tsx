@@ -25,6 +25,9 @@ const ProjectOutput: React.FC<ProjectOutputProps> = ({ project }) => {
                             </>
                         )}
                     </span>
+
+                    {project.demoURL && project.repositoryURL && " | "}
+
                     <span>
                         {project.repositoryURL && (
                             <>
@@ -34,6 +37,9 @@ const ProjectOutput: React.FC<ProjectOutputProps> = ({ project }) => {
                             </>
                         )}
                     </span>
+
+                    {project.repositoryURL && project.npmURL && " | "}
+
                     <span>
                         {project.npmURL && (
                             <>
