@@ -7,7 +7,8 @@
         "start": "set \"BROWSER=none\" && start chrome http://localhost:5173 -incognito && vite",
         "build": "tsc && vite build",
         "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-        "preview": "vite preview"
+        "preview": "vite preview",
+        "architecture": "depcruise --include-only \"^src\" --output-type dot src | dot -T svg > dependencygraph.svg"
     },
     "dependencies": {
         "date-fns": "^2.30.0",
@@ -20,6 +21,7 @@
         "@typescript-eslint/eslint-plugin": "^6.0.0",
         "@typescript-eslint/parser": "^6.0.0",
         "@vitejs/plugin-react-swc": "^3.3.2",
+        "dependency-cruiser": "^13.1.4",
         "eslint": "^8.45.0",
         "eslint-plugin-react-hooks": "^4.6.0",
         "eslint-plugin-react-refresh": "^0.4.3",
