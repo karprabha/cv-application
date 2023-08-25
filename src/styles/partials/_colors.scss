@@ -18,10 +18,26 @@ $primary-color-classic: #000000;
 $secondary-color-classic: #ffffff;
 $accent-color-classic: #ff5252;
 
+$bs-primary-color: #007bff;
+$bs-primary-color-darker: #0056b3;
+
+$bs-danger-color: #dc3545;
+$bs-danger-color-darker: #c82333;
+
+$bs-warning-color: #ffc107;
+$bs-warning-color-darker: #d39e00;
+
 :root {
     --primary-color: #{$primary-color-clean};
     --secondary-color: #{$secondary-color-vibrant};
     --accent-color: #{$accent-color-calm};
+
+    --btn-bs-primary-color: #{$bs-primary-color};
+    --btn-bs-primary-color-darker: #{$bs-primary-color-darker};
+    --btn-bs-danger-color: #{$bs-danger-color};
+    --btn-bs-danger-color-darker: #{$bs-danger-color-darker};
+    --btn-bs-warning-color: #{$bs-warning-color};
+    --btn-bs-warning-color-darker: #{$bs-warning-color-darker};
 }
 
 .color-scheme1 {

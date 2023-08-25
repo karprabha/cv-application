@@ -1,6 +1,7 @@
 @use "./colors" as *;
 
 .editor {
+    min-width: 600px;
     background-color: var(--secondary-color);
     font-family:
         system-ui,
@@ -65,6 +66,8 @@
 .tool-section {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+
     .font-select-btn {
         display: flex;
         gap: 10px;
@@ -76,6 +79,20 @@
     .resume-related-btn {
         display: flex;
         gap: 10px;
+
+        .download-pdf-btn {
+            background-color: var(--btn-bs-danger-color);
+            &:hover {
+                background-color: var(--btn-bs-danger-color-darker);
+            }
+        }
+
+        .load-sample-btn {
+            background-color: var(--btn-bs-primary-color);
+            &:hover {
+                background-color: var(--btn-bs-primary-color-darker);
+            }
+        }
     }
 
     button {

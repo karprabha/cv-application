@@ -35,10 +35,18 @@ const ToolSection: React.FC<ToolSectionProps> = ({
             </div>
 
             <div className="resume-related-btn">
-                <button type="button" onClick={() => loadSampleCV()}>
+                <button
+                    type="button"
+                    className="load-sample-btn"
+                    onClick={() => loadSampleCV()}
+                >
                     Load Sample
                 </button>
-                <button type="button" onClick={printResume}>
+                <button
+                    type="button"
+                    className="download-pdf-btn"
+                    onClick={printResume}
+                >
                     Download PDF
                 </button>
             </div>
