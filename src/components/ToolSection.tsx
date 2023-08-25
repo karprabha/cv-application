@@ -16,6 +16,10 @@ const ToolSection: React.FC<ToolSectionProps> = ({
         "standard-sans-serif",
     ];
 
+    const printResume = () => {
+        window.print();
+    };
+
     return (
         <div className="input-section-container tool-section">
             <div className="font-select-btn">
@@ -34,7 +38,9 @@ const ToolSection: React.FC<ToolSectionProps> = ({
                 <button type="button" onClick={() => loadSampleCV()}>
                     Load Sample
                 </button>
-                <button type="button">Download PDF</button>
+                <button type="button" onClick={printResume}>
+                    Download PDF
+                </button>
             </div>
         </div>
     );

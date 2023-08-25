@@ -82,3 +82,26 @@ textarea {
 button {
     font-family: inherit;
 }
+
+@media print {
+    @page {
+        size: auto;
+        margin: 0;
+    }
+
+    header {
+        display: none;
+    }
+
+    .editor {
+        display: none;
+    }
+
+    .output {
+        margin: 30px;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        page-break-after: auto;
+    }
+}
