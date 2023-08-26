@@ -62,7 +62,7 @@ I have plans on implementing following features in future
 
 1.  Font size option
 2.  More font style options
-3.  Different CV styles (including single column CV)
+3.  Different CV styles (including double column CV)
 
 ## Contributing
 
