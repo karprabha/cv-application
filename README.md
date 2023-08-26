@@ -13,7 +13,7 @@ Create and customize your CV effortlessly with this React-based CV Application. 
 -   **CV Generation**: Instantly generate a side-by-side CV layout.
 -   **PDF Download**: Download the CV as a PDF with text selection and active hyperlinks.
 
-**Note**: When clicked Download PDF select `Save to PDF` from drop down to make CV text selectable and active hyperlinks
+**Note**: When clicked Download PDF select `Save to PDF` from drop down of destination section to make CV text selectable and active hyperlinks
 
 ## Fonts
 
