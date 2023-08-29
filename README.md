@@ -30,6 +30,10 @@ Choose from three available fonts:
 3. Generate the CV layout.
 4. Download your CV as a PDF using the print option. Make sure to select "Save as PDF" in the print dialog for selectable text and valid hyperlinks.
 
+## Dependency Graph
+
+![Dependency Graph](./dependencygraph.svg)
+
 ## Installation
 
 1. Clone the repository:
